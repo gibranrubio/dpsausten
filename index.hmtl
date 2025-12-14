@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Founders in Austin</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #ffffff;
+      color: #111;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 64px 24px;
+    }
+
+    h1 {
+      font-size: 48px;
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+
+    h2 {
+      font-size: 28px;
+      margin-top: 64px;
+      margin-bottom: 16px;
+    }
+
+    p {
+      font-size: 18px;
+      margin-bottom: 16px;
+    }
+
+    .muted {
+      color: #666;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 24px;
+      padding: 12px 20px;
+      border: 1px solid #111;
+      text-decoration: none;
+      color: #111;
+      font-weight: 500;
+    }
+
+    .button:hover {
+      background: #111;
+      color: #fff;
+    }
+
+    footer {
+      margin-top: 96px;
+      font-size: 14px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <h1>Founders in Austin</h1>
+    <p>One person. One story. One room.</p>
+    <p class="muted">Invite only.</p>
+
+    <a href="#invite" class="button">Request an Invite</a>
+
+    <h2>What This Is</h2>
+    <p>
+      This is a small, private gathering for people building real things in Austin.
+    </p>
+    <p>
+      Each event features one founder, early employee, or solo hacker working on something genuinely interesting.
+    </p>
+    <p>
+      No panels. No pitching. No bullshit.
+    </p>
+
+    <h2>Next Event</h2>
+    <p>
+      Speaker announced privately<br />
+      Austin, Texas<br />
+      Limited seats
+    </p>
+
+    <h2>Who Attends</h2>
+    <p>
+      Founders<br />
+      Early startup employees<br />
+      Engineers and operators<br />
+      Builders who prefer listening over talking
+    </p>
+
+    <h2 id="invite">Request an Invite</h2>
+    <p>
+      Attendance is invite only.
+    </p>
+    <p>
+      If you are building something interesting in Austin, request access below.
+    </p>
+
+    <a href="mailto:hello@yourdomain.com" class="button">Request Access</a>
