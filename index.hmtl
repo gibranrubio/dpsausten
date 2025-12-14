@@ -4,105 +4,309 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Founders in Austin</title>
+  <meta name="description" content="Invite-only talks for people building in Austin." />
   <style>
+    :root {
+      --text: #111;
+      --muted: #666;
+      --bg: #fff;
+      --border: #111;
+      --soft: #e9e9e9;
+    }
+
+    * { box-sizing: border-box; }
+
     body {
       margin: 0;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background: #ffffff;
-      color: #111;
+      background: var(--bg);
+      color: var(--text);
       line-height: 1.6;
     }
 
     .container {
-      max-width: 720px;
+      max-width: 760px;
       margin: 0 auto;
-      padding: 64px 24px;
+      padding: 64px 20px;
+    }
+
+    header {
+      margin-bottom: 40px;
     }
 
     h1 {
-      font-size: 48px;
-      line-height: 1.1;
-      margin-bottom: 16px;
+      font-size: 44px;
+      line-height: 1.12;
+      margin: 0 0 10px 0;
+      letter-spacing: -0.02em;
     }
 
     h2 {
-      font-size: 28px;
-      margin-top: 64px;
-      margin-bottom: 16px;
+      font-size: 22px;
+      margin: 56px 0 12px 0;
+      letter-spacing: -0.01em;
     }
 
     p {
       font-size: 18px;
-      margin-bottom: 16px;
+      margin: 0 0 14px 0;
     }
 
-    .muted {
-      color: #666;
+    .muted { color: var(--muted); }
+
+    .row {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      flex-wrap: wrap;
     }
 
     .button {
       display: inline-block;
-      margin-top: 24px;
-      padding: 12px 20px;
-      border: 1px solid #111;
+      padding: 12px 18px;
+      border: 1px solid var(--border);
       text-decoration: none;
-      color: #111;
+      color: var(--text);
       font-weight: 500;
+      background: transparent;
+      cursor: pointer;
     }
 
     .button:hover {
-      background: #111;
+      background: var(--text);
       color: #fff;
     }
 
-    footer {
-      margin-top: 96px;
+    .card {
+      border: 1px solid var(--soft);
+      padding: 16px;
+      margin-top: 14px;
+    }
+
+    label {
+      display: block;
       font-size: 14px;
-      color: #666;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px 12px;
+      border: 1px solid var(--soft);
+      font-size: 16px;
+      outline: none;
+    }
+
+    input:focus {
+      border-color: var(--border);
+    }
+
+    .inputRow {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+
+    .status {
+      font-size: 14px;
+      margin-top: 10px;
+    }
+
+    .status.ok { color: #0a7a2f; }
+    .status.bad { color: #b00020; }
+
+    .divider {
+      margin-top: 72px;
+      border-top: 1px solid var(--soft);
+      padding-top: 18px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .hidden { display: none; }
+
+    @media (min-width: 680px) {
+      .container { padding: 80px 24px; }
+      h1 { font-size: 54px; }
+      .inputRow { grid-template-columns: 1fr 1fr; }
     }
   </style>
 </head>
 <body>
   <div class="container">
 
-    <h1>Founders in Austin</h1>
-    <p>One person. One story. One room.</p>
-    <p class="muted">Invite only.</p>
+    <header>
+      <h1>Founders in Austin</h1>
+      <p class="muted">Invite-only talks for people building in Austin.</p>
+      <div class="row" style="margin-top: 18px;">
+        <a class="button" href="#invite">Enter invite code</a>
+        <a class="button" href="#request">Request access</a>
+      </div>
+    </header>
 
-    <a href="#invite" class="button">Request an Invite</a>
+    <section>
+      <h2>What this is</h2>
+      <p>
+        A small room. One person. One hour.
+      </p>
+      <p>
+        The speaker is either a founder, an early employee, or a solo hacker. Only in Austin.
+      </p>
+      <p>
+        If you are here, it is because someone thinks you should be.
+      </p>
+    </section>
 
-    <h2>What This Is</h2>
-    <p>
-      This is a small, private gathering for people building real things in Austin.
-    </p>
-    <p>
-      Each event features one founder, early employee, or solo hacker working on something genuinely interesting.
-    </p>
-    <p>
-      No panels. No pitching. No bullshit.
-    </p>
+    <section>
+      <h2>Next session</h2>
+      <div class="card">
+        <p style="margin-bottom: 6px;"><strong>Details are sent privately.</strong></p>
+        <p class="muted" style="margin: 0;">Location, time, and speaker are shared with invitees.</p>
+      </div>
+    </section>
 
-    <h2>Next Event</h2>
-    <p>
-      Speaker announced privately<br />
-      Austin, Texas<br />
-      Limited seats
-    </p>
+    <section>
+      <h2>Who comes</h2>
+      <p>
+        People building companies. People writing code. People doing the work.
+      </p>
+    </section>
 
-    <h2>Who Attends</h2>
-    <p>
-      Founders<br />
-      Early startup employees<br />
-      Engineers and operators<br />
-      Builders who prefer listening over talking
-    </p>
+    <section id="invite">
+      <h2>Invite code</h2>
+      <p class="muted">
+        Enter your code to unlock RSVP.
+      </p>
 
-    <h2 id="invite">Request an Invite</h2>
-    <p>
-      Attendance is invite only.
-    </p>
-    <p>
-      If you are building something interesting in Austin, request access below.
-    </p>
+      <div class="card">
+        <label for="inviteCode">Invite code</label>
+        <div class="row" style="align-items: stretch;">
+          <input id="inviteCode" type="text" placeholder="e.g. AUSTIN-XXXX" autocomplete="off" />
+          <button class="button" id="unlockBtn" type="button">Unlock</button>
+        </div>
+        <div id="codeStatus" class="status hidden"></div>
+      </div>
 
-    <a href="mailto:hello@yourdomain.com" class="button">Request Access</a>
+      <div id="rsvpPanel" class="card hidden" style="margin-top: 16px;">
+        <p style="margin-bottom: 10px;"><strong>RSVP</strong></p>
+
+        <!-- Replace action with your Formspree endpoint or your own handler -->
+        <form id="rsvpForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <input type="hidden" name="invite_code" id="invite_code_hidden" />
+
+          <div class="inputRow">
+            <div>
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" placeholder="First Last" required />
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="you@domain.com" required />
+            </div>
+          </div>
+
+          <div style="margin-top: 12px;">
+            <label for="role">What are you building</label>
+            <input id="role" name="what_building" type="text" placeholder="One sentence. No deck." />
+          </div>
+
+          <div class="row" style="margin-top: 14px;">
+            <button class="button" type="submit">Send RSVP</button>
+            <span class="muted" style="font-size: 14px;">You will get details by email.</span>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section id="request">
+      <h2>Request access</h2>
+      <p class="muted">
+        If you are building something real in Austin, send a short note.
+      </p>
+      <div class="row" style="margin-top: 10px;">
+        <a class="button" href="mailto:hello@yourdomain.com?subject=Founders%20in%20Austin%20-%20Access%20Request&body=Name%3A%0AWhat%20are%20you%20building%3A%0ALink%20(optional)%3A%0A">Email</a>
+      </div>
+    </section>
+
+    <div class="divider">
+      Austin, TX
+    </div>
+
+  </div>
+
+  <script>
+    // Invite code flow
+    // 1) Put your real invite codes here (or swap to a server check later).
+    // 2) Codes are checked client-side, so do not treat this as security.
+    const VALID_CODES = new Set([
+      "AUSTIN-FOUNDERS",
+      "AUS-001",
+      "AUS-002"
+    ]);
+
+    const inviteInput = document.getElementById("inviteCode");
+    const unlockBtn = document.getElementById("unlockBtn");
+    const codeStatus = document.getElementById("codeStatus");
+    const rsvpPanel = document.getElementById("rsvpPanel");
+    const inviteHidden = document.getElementById("invite_code_hidden");
+
+    function setStatus(message, ok) {
+      codeStatus.textContent = message;
+      codeStatus.classList.remove("hidden", "ok", "bad");
+      codeStatus.classList.add(ok ? "ok" : "bad");
+    }
+
+    function normalizeCode(raw) {
+      return (raw || "").trim().toUpperCase();
+    }
+
+    function unlock(code) {
+      const normalized = normalizeCode(code);
+
+      if (!normalized) {
+        setStatus("Enter a code.", false);
+        rsvpPanel.classList.add("hidden");
+        return;
+      }
+
+      if (VALID_CODES.has(normalized)) {
+        setStatus("Unlocked.", true);
+        rsvpPanel.classList.remove("hidden");
+        inviteHidden.value = normalized;
+
+        // Keep it in the URL for convenience without retyping
+        const url = new URL(window.location.href);
+        url.searchParams.set("code", normalized);
+        window.history.replaceState({}, "", url.toString());
+
+        // Optional: focus the RSVP form
+        const nameField = document.getElementById("name");
+        if (nameField) nameField.focus();
+      } else {
+        setStatus("Invalid code.", false);
+        rsvpPanel.classList.add("hidden");
+        inviteHidden.value = "";
+      }
+    }
+
+    unlockBtn.addEventListener("click", () => unlock(inviteInput.value));
+    inviteInput.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") {
+        e.preventDefault();
+        unlock(inviteInput.value);
+      }
+    });
+
+    // Auto-unlock if user visits with ?code=...
+    (function autoUnlockFromURL() {
+      const url = new URL(window.location.href);
+      const code = url.searchParams.get("code");
+      if (!code) return;
+
+      inviteInput.value = normalizeCode(code);
+      unlock(inviteInput.value);
+    })();
+  </script>
+</body>
+</html>
